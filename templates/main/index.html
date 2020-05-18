@@ -46,10 +46,15 @@
                 which consists of many LSTM, Dense and Dropout layers. It predicts
                 the notes and chords which shouldcome after a seuence of notes
                 provided. The model consists over 5 million trained parameters.
-                It is built on <a class=" text-lighten-4 font-serif" href="http://keras.io">Keras</a>
-                and <a class=" text-lighten-4 font-serif" href="http://tensorflow.org">Tensorflow</a>
-                as backend.The website is built with Django Framework used in backend,
-                and Materializecss in front end. To know more about the model visit <a class=" text-lighten-4 font-serif" href="http://keras.io">Github</a>.
+                It is built on <a class="brown-text lighten-4 font-serif" href="http://keras.io">Keras</a>
+                and <a class="brown-text darken-1 font-serif" href="http://tensorflow.org">Tensorflow</a>
+                as backend.The website is built with 
+                <a class="brown-text darken-1 font-serif" href="https://docs.djangoproject.com/en/3.0/">Django</a> 
+                Framework used in backend, and 
+                <a class="brown-text darken-1 font-serif" href="https://materializecss.com">MaterializeCSS</a>
+                 in front end. To know more about the model visit my 
+                <a class="brown-text darken-1 font-serif" href="https://github.com/gauravv0412/Music-Generation-using-Deep-Learning">
+                    Github Repo</a>.
             </p>
         </div>
         <div class="col l6 s4">
@@ -58,24 +63,21 @@
     </div>
 </div>
 <div class="parallax-container">
-    <div class="parallax"><img class="responsive-img" src="{% static 'main/images/coronavirus.jpg' %}"></div>
+    <div class="parallax"><img class="responsive-img" src="{% static 'main/images/robo-piano.jpg' %}"></div>
 </div>
 
 <div class="container blue-grey">
     <div class="row"></div>
     <div class="row">
         <div class="col l8 s12">
-            <h5 class="grey-text text-lighten-4 font-serif">About Covid-19</h5>
-            <p class="grey-text text-lighten-4 font-serif"> Coronavirus disease (COVID-19) is an
-                infectious disease caused by a newly discovered coronavirus.The virus that
-                causes COVID-19 is mainly transmitted through droplets generated when an
-                infected person coughs, sneezes, or exhales. These droplets are too heavy
-                to hang in the air, and quickly fall on floors or surfaces.
-                You can be infected by breathing in the virus if you are within close
-                proximity of someone who has COVID-19, or by touching a contaminated
-                surface and then your eyes, nose or mouth.
-                <a class="text-lighten-4 font-serif"
-                    href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">More info...</a>
+            <h5 class="grey-text text-lighten-4 font-serif">About Music Generation Project</h5>
+            <p class="grey-text text-lighten-4 font-serif"> 
+                In this project I trained my Deep Learning model on piano instrumental music which 
+                were available in MIDI format. In this format we have details of notes(a keystroke), chords(combination
+                of keys) and their offset(time when a key(s) is pressed). We use this information to train
+                model to predict that given these combination of keys which should be the next key(s) to be pressed.
+                The model has recognised 600 different chords and notes (on different octaves), and using
+                them has produced great results.
             </p>
         </div>
         <div class="col l4 s4">
@@ -93,14 +95,11 @@
     <div class="row">
         <div class="col l9 s12">
             <h5 class="grey-text text-lighten-4 font-serif">About Dataset</h5>
-            <p class="grey-text text-lighten-4 font-serif"> The dataset for Model was collected
-                and compiled from famous public data source platforms:
-                <a class=" text-lighten-4 font-serif"
-                    href="https://github.com/ieee8023/covid-chestxray-dataset/tree/master/images">Github</a>
-                and <a class=" text-lighten-4 font-serif"
-                    href="https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia">kaggle</a>.
-                A descent distortion and augmentation was applied on images before training. This was done
-                to prevent overfitting as data was quite small and chances of overfitting were very high.
+            <p class="grey-text text-lighten-4 font-serif"> I used Maestro dataset for this project 
+                from <a class = "brown-text lighten-4 font-serif" href="https://magenta.tensorflow.org/datasets/maestro#v200">https://magenta.tensorflow.org/datasets/maestro#v200</a>. MAESTRO (MIDI and Audio 
+                Edited for Synchronous TRacks and Organization) is a dataset composed of over 200 
+                hours of virtuosic piano performances captured with fine alignment (~3 ms) between 
+                note labels and audio waveforms.
             </p>
         </div>
         <div class="col l3 s4">
