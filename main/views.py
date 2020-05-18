@@ -5,7 +5,7 @@ import pickle
 import numpy as np
 from tensorflow.keras.models import load_model
 
-pathh = './'
+pathh = '/app/'
 # pathh = '/app/'
 
 def get_model_ouput(model, notes, seq_len, start = None, num_notes = 100):
