@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from music21 import converter, instrument, note, chord, stream
 import pickle
+import os.path
 import numpy as np
 from keras.models import load_model
 
@@ -96,8 +97,14 @@ def get_midi_file(output_notes, save = False, file_name = None):
 def predict():
     with open(pathh + '/static/main/ml/notes', 'rb') as file:
         notes = pickle.load(file)
-    
-    model = load_model(pathh + 'static/main/ml/model-5.hdf5')
+    if not path.exists("model-5.hdf5"):
+        print('Downloading')
+        !wget https://www.dropbox.com/s/auun8vngdv2f6jx/model-5.hdf5
+    else:
+        print('present')
+    print('loading model')
+    model = load_model('model-5.hdf5')
+    # model = load_model(pathh + 'static/main/ml/model-5.hdf5')
     seq_len = 100
 
     prediction_output = get_model_ouput(model, notes, 100, num_notes=100)
