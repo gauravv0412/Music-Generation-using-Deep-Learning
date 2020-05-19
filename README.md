@@ -47,8 +47,7 @@ Step - 3: Launch Django app by:
 
 Click on **Generate Music** button and machine will start generating music. It will take around a minute to make music and MIDI file will automatically be downloaded once generation of music is complete. 
 
-**Note: Do not press on "Generate Music" button repeatedly. Wait once it has generated music and page is reloaded. And 
-        then try again generating music.**
+**Note: Do not press on "Generate Music" button repeatedly. After pressing once, wait until it generates music and page gets reloaded. After this you can try again by pressing "Generate Music" button.**
 
 ** Preferred Browser : Google Chrome** But other will also work.
 
