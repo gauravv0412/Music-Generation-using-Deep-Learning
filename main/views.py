@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from music21 import converter, instrument, note, chord, stream
 import pickle
 import os.path
+import os
 import numpy as np
 from keras.models import load_model
 
@@ -99,7 +100,7 @@ def predict():
         notes = pickle.load(file)
     if not path.exists("model-5.hdf5"):
         print('Downloading')
-        !wget https://www.dropbox.com/s/auun8vngdv2f6jx/model-5.hdf5
+        os.system('wget https://www.dropbox.com/s/auun8vngdv2f6jx/model-5.hdf5')
     else:
         print('present')
     print('loading model')
