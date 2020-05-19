@@ -7,8 +7,8 @@ import os
 import numpy as np
 from tensorflow.keras.models import load_model
 
-# pathh = './'
-pathh = '/app'
+pathh = './'
+# pathh = '/app'
 
 def get_model_ouput(model, notes, seq_len, start = None, num_notes = 100):
     
@@ -98,14 +98,14 @@ def get_midi_file(output_notes, save = False, file_name = None):
 def predict():
     with open(pathh + '/static/main/ml/notes', 'rb') as file:
         notes = pickle.load(file)
-    if not p.exists("model-5.hdf5"):
-        print('Downloading')
-        os.system('wget https://www.dropbox.com/s/auun8vngdv2f6jx/model-5.hdf5')
-    else:
-        print('present')
+    # if not p.exists("model-5.hdf5"):
+    #     print('Downloading')
+    #     os.system('wget https://www.dropbox.com/s/auun8vngdv2f6jx/model-5.hdf5')
+    # else:
+    #     print('present')
     print('loading model')
-    model = load_model('model-5.hdf5')
-    # model = load_model(pathh + 'static/main/ml/model-5.hdf5')
+    # model = load_model('model-5.hdf5')
+    model = load_model(pathh + 'static/main/ml/model-5.hdf5')
     seq_len = 100
 
     prediction_output = get_model_ouput(model, notes, 100, num_notes=100)
