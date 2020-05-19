@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from music21 import converter, instrument, note, chord, stream
 import pickle
 import numpy as np
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 
 pathh = '/app/'
 # pathh = '/app/'
